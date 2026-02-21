@@ -97,7 +97,7 @@ export default function Speaking() {
               Every speaking engagement includes a complimentary Spatial Wellness Quick Scan, a €197 value.
             </p>
             <a
-              href="mailto:home@houseofreturn.nl"
+              href="mailto:hello@spatial-wellness.com"
               className="inline-block bg-sage text-warm-white px-8 py-4 rounded-sm hover:bg-sage/90 transition-colors font-medium"
             >
               Get in touch

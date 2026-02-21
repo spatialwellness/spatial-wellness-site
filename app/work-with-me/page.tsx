@@ -47,7 +47,7 @@ export default function WorkWithMe() {
                 One-on-one guidance to interpret your audit results, prioritise your next steps, and create a realistic implementation roadmap. Available online (video call) or on-site.
               </p>
               <p className="text-burgundy/80 mb-8 leading-relaxed">
-                <a href="mailto:home@houseofreturn.nl" className="text-sage hover:text-sage/80 transition-colors font-medium">
+                <a href="mailto:hello@spatial-wellness.com" className="text-sage hover:text-sage/80 transition-colors font-medium">
                   Contact for pricing
                 </a>
               </p>
@@ -60,7 +60,7 @@ export default function WorkWithMe() {
                 Custom spatial planning, mood boards, colour palettes, and product recommendations tailored to your team's needs, existing architecture, and budget.
               </p>
               <p className="text-burgundy/80 mb-8 leading-relaxed">
-                <a href="mailto:home@houseofreturn.nl" className="text-sage hover:text-sage/80 transition-colors font-medium">
+                <a href="mailto:hello@spatial-wellness.com" className="text-sage hover:text-sage/80 transition-colors font-medium">
                   Get in touch
                 </a>
               </p>

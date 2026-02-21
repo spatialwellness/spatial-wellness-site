@@ -16,10 +16,10 @@ export default function Footer() {
             <h4 className="font-heading text-xl mb-4">Get in touch</h4>
             <p className="mb-2">
               <a 
-                href="mailto:home@houseofreturn.nl" 
+                href="mailto:hello@spatial-wellness.com" 
                 className="text-warm-white/80 hover:text-warm-white transition-colors"
               >
-                home@houseofreturn.nl
+                hello@spatial-wellness.com
               </a>
             </p>
             <div className="flex gap-4 mt-6">
