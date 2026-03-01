@@ -141,6 +141,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Calculate Your Cost Section */}
+      <section className="bg-dusty-rose/10 py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-heading text-3xl md:text-5xl text-burgundy mb-8 text-center">
+            What is your office costing you?
+          </h2>
+          <p className="text-xl text-burgundy/80 mb-12 text-center max-w-2xl mx-auto leading-relaxed">
+            Most HR teams underestimate the real cost of sick leave, turnover, and disengagement. Here's how to calculate it.
+          </p>
+          <div className="bg-warm-white border border-dusty-rose/30 p-10 rounded-sm">
+            <h3 className="font-heading text-2xl text-burgundy mb-6">Sick Leave Cost Calculator</h3>
+            <div className="space-y-4 text-burgundy/80 mb-6">
+              <p className="flex items-center gap-3">
+                <span className="text-sage">→</span>
+                <span>Team size × average sick days/year × €250/day (salary + lost productivity)</span>
+              </p>
+              <p className="flex items-center gap-3">
+                <span className="text-sage">→</span>
+                <span>If your sick leave is above industry average, your office might be the hidden culprit</span>
+              </p>
+              <p className="flex items-center gap-3">
+                <span className="text-sage">→</span>
+                <span>Research links open-plan offices to elevated sick leave risk</span>
+              </p>
+            </div>
+            <div className="pt-6 border-t border-dusty-rose/30">
+              <p className="text-lg text-burgundy mb-4">
+                <strong>Want to diagnose what's draining your team?</strong>
+              </p>
+              <p className="text-burgundy/80 mb-6">
+                Book a free 30-minute discovery call. We'll walk through your space, calculate your exposure, and identify quick wins.
+              </p>
+              <Link
+                href="/work-with-me"
+                className="inline-block bg-sage text-warm-white px-8 py-4 rounded-sm hover:bg-sage/90 transition-colors font-medium"
+              >
+                Book discovery call
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works Section */}
       <section className="max-w-5xl mx-auto px-6 py-24">
         <h2 className="font-heading text-3xl md:text-5xl text-burgundy mb-16 text-center">
@@ -205,44 +248,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Research & Impact Section */}
+      {/* The Problem Section - Research Backed */}
       <section className="bg-burgundy text-warm-white py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-heading text-3xl md:text-5xl mb-12 text-center">
             What the research shows
           </h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-warm-white/10 p-8 rounded-sm text-center">
-              <div className="text-4xl font-heading mb-4 text-dusty-rose">10-20%</div>
-              <p className="text-lg leading-relaxed">
-                of your workforce is neurodivergent (ADHD, autism, HSP) — whether you know it or not.
+          <div className="grid md:grid-cols-2 gap-12 mb-12">
+            <div className="bg-warm-white/10 p-8 rounded-sm">
+              <h3 className="font-heading text-2xl mb-4 text-dusty-rose">Open-plan offices increase sick leave</h3>
+              <p className="text-lg leading-relaxed mb-4">
+                A 2014 study tracking 1,852 office workers over 2 years found significantly higher sick leave rates in open-plan offices compared to private or shared-room offices.
               </p>
-              <p className="text-sm text-warm-white/60 mt-4">
+              <p className="text-sm text-warm-white/60">
+                Source: Danielsson et al., Ergonomics, 2014
+              </p>
+            </div>
+            <div className="bg-warm-white/10 p-8 rounded-sm">
+              <h3 className="font-heading text-2xl mb-4 text-dusty-rose">10-20% of your team is neurodivergent</h3>
+              <p className="text-lg leading-relaxed mb-4">
+                ADHD, autism, HSP (Highly Sensitive Person), dyslexia — whether diagnosed or not. Your office design either supports them or exhausts them.
+              </p>
+              <p className="text-sm text-warm-white/60">
                 Source: World Economic Forum, 2023
               </p>
             </div>
-            <div className="bg-warm-white/10 p-8 rounded-sm text-center">
-              <div className="text-4xl font-heading mb-4 text-dusty-rose">30%</div>
-              <p className="text-lg leading-relaxed">
-                more productive: teams with neurodivergent people when properly supported.
-              </p>
-              <p className="text-sm text-warm-white/60 mt-4">
-                Source: Deloitte Research
-              </p>
-            </div>
-            <div className="bg-warm-white/10 p-8 rounded-sm text-center">
-              <div className="text-4xl font-heading mb-4 text-dusty-rose">Higher Risk</div>
-              <p className="text-lg leading-relaxed">
-                of sick leave in open-plan offices compared to private or shared spaces.
-              </p>
-              <p className="text-sm text-warm-white/60 mt-4">
-                Source: Ergonomics, 2014
-              </p>
-            </div>
           </div>
-          <div className="text-center">
+          <div className="bg-warm-white/10 p-8 rounded-sm">
+            <h3 className="font-heading text-2xl mb-4 text-dusty-rose text-center">When companies redesign for wellness</h3>
+            <p className="text-lg leading-relaxed text-center mb-4">
+              Research on employees transitioning to wellness-focused offices showed satisfaction rates jumping from 42% to 70%, with measurable improvements in mental health and well-being.
+            </p>
+            <p className="text-sm text-warm-white/60 text-center">
+              Source: WELL Building Standard impact study, 2022 (1,300 employees)
+            </p>
+          </div>
+          <div className="text-center mt-12">
             <p className="text-xl leading-relaxed max-w-3xl mx-auto">
-              Your office is either unlocking this potential — or quietly draining it. Let's find out which.
+              The question isn't whether your office affects your people. It's how much it's costing you — and what to fix first.
             </p>
           </div>
         </div>
