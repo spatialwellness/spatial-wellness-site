@@ -9,18 +9,21 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-burgundy mb-8 leading-tight">
-              Your space is already shaping how you think, focus, and feel.
+              Workspaces designed for how people actually work
             </h1>
+            <p className="text-lg md:text-xl text-burgundy/80 mb-8 max-w-3xl leading-relaxed">
+              Your hybrid office isn't working. People don't want to come in. When they do, they struggle to focus. Sick leave is up. Turnover is climbing.
+            </p>
             <p className="text-lg md:text-xl text-burgundy/80 mb-12 max-w-3xl leading-relaxed">
-              I'm Elianne Alblas. I help people and organisations understand what their workspace is really doing to them, and what to change first.
+              The problem isn't your people — it's your space.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://audit.houseofreturn.nl"
+              <Link
+                href="/work-with-me"
                 className="inline-block bg-sage text-warm-white px-8 py-4 rounded-sm hover:bg-sage/90 transition-colors text-center font-medium"
               >
-                Take the free audit
-              </a>
+                Book a discovery call
+              </Link>
               <Link
                 href="/speaking"
                 className="inline-block bg-transparent border-2 border-sage text-sage px-8 py-4 rounded-sm hover:bg-sage hover:text-warm-white transition-colors text-center font-medium"
@@ -38,6 +41,85 @@ export default function Home() {
               priority
             />
           </div>
+        </div>
+      </section>
+
+      {/* The Problem Section */}
+      <section className="bg-burgundy text-warm-white py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-heading text-3xl md:text-5xl mb-12">
+            Your office is designed for the wrong work
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 text-lg leading-relaxed">
+            <div>
+              <p className="mb-6">
+                Most offices prioritize collaboration — open plans, breakout spaces, "energy."
+              </p>
+              <p>
+                But 60% of knowledge work requires deep focus. And 30-40% of your team is neuro-diverse (ADHD, autism, HSP) — struggling with sensory overload daily.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <p className="flex items-start gap-3">
+                <span className="text-dusty-rose text-2xl leading-none">✗</span>
+                <span>Constant noise and visual chaos</span>
+              </p>
+              <p className="flex items-start gap-3">
+                <span className="text-dusty-rose text-2xl leading-none">✗</span>
+                <span>Fluorescent lighting causing fatigue</span>
+              </p>
+              <p className="flex items-start gap-3">
+                <span className="text-dusty-rose text-2xl leading-none">✗</span>
+                <span>No escape from interruptions</span>
+              </p>
+              <p className="flex items-start gap-3">
+                <span className="text-dusty-rose text-2xl leading-none">✗</span>
+                <span>Employees choosing home over office</span>
+              </p>
+              <p className="flex items-start gap-3">
+                <span className="text-dusty-rose text-2xl leading-none">✗</span>
+                <span>Rising sick leave and turnover costs</span>
+              </p>
+            </div>
+          </div>
+          <p className="text-xl mt-12 italic">
+            Sound familiar?
+          </p>
+        </div>
+      </section>
+
+      {/* The Solution Section */}
+      <section className="bg-dusty-rose/10 py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-heading text-3xl md:text-5xl text-burgundy mb-12">
+            Redesign for reality, not trends
+          </h2>
+          <div className="prose prose-lg max-w-none text-burgundy/90 leading-relaxed space-y-6 mb-12">
+            <p>
+              I help companies redesign offices using <strong>neuro-inclusive spatial design</strong> — creating spaces that work for everyone, not just extroverts and neurotypical brains.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 text-burgundy/90">
+            <p className="flex items-start gap-3 text-lg">
+              <span className="text-sage text-2xl leading-none">✓</span>
+              <span>Sensory-balanced zones (focus rooms, quiet areas, collaboration spaces)</span>
+            </p>
+            <p className="flex items-start gap-3 text-lg">
+              <span className="text-sage text-2xl leading-none">✓</span>
+              <span>Lighting and acoustics that reduce overwhelm</span>
+            </p>
+            <p className="flex items-start gap-3 text-lg">
+              <span className="text-sage text-2xl leading-none">✓</span>
+              <span>Flexible layouts that respect different work styles</span>
+            </p>
+            <p className="flex items-start gap-3 text-lg">
+              <span className="text-sage text-2xl leading-none">✓</span>
+              <span>Evidence-based design rooted in environmental psychology</span>
+            </p>
+          </div>
+          <p className="text-xl text-burgundy/80 mt-12 italic">
+            You don't need a full renovation. You need strategic tweaks with measurable impact.
+          </p>
         </div>
       </section>
 
@@ -59,136 +141,178 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What I Do Section */}
-      <section className="bg-dusty-rose/10 py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-5xl text-burgundy mb-12">
-            What I do
-          </h2>
-          <div className="prose prose-lg max-w-none text-burgundy/90 leading-relaxed space-y-6">
-            <p>
-              I've had various businesses in the hospitality industry where I saw firsthand what interior and environment does to people. Thousands of guests, employees, and teams moving through spaces I helped shape. Along the way I became obsessed with a question most people in hospitality never ask: what is this room doing to the people in it?
+      {/* How It Works Section */}
+      <section className="max-w-5xl mx-auto px-6 py-24">
+        <h2 className="font-heading text-3xl md:text-5xl text-burgundy mb-16 text-center">
+          From audit to action in 90 days
+        </h2>
+        <div className="grid md:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-sage text-warm-white rounded-full flex items-center justify-center text-2xl font-heading mb-6 mx-auto">
+              1
+            </div>
+            <h3 className="font-heading text-xl text-burgundy mb-3">
+              Discovery Call
+            </h3>
+            <p className="text-burgundy/80 leading-relaxed">
+              30 minutes, free. Understand your challenges, team dynamics, and goals.
             </p>
-            <p>
-              Not aesthetically. Neurologically.
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-sage text-warm-white rounded-full flex items-center justify-center text-2xl font-heading mb-6 mx-auto">
+              2
+            </div>
+            <h3 className="font-heading text-xl text-burgundy mb-3">
+              Workplace Wellness Audit
+            </h3>
+            <p className="text-burgundy/80 leading-relaxed">
+              Full spatial assessment + optional employee sensory survey.
             </p>
-            <p>
-              I started reading everything I could find on environmental psychology, neuroscience, and neuro-inclusive design. Not as a scientist, but because I needed to understand why some spaces make people sharper, calmer, more creative. And why others quietly drain them.
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-sage text-warm-white rounded-full flex items-center justify-center text-2xl font-heading mb-6 mx-auto">
+              3
+            </div>
+            <h3 className="font-heading text-xl text-burgundy mb-3">
+              Strategic Report
+            </h3>
+            <p className="text-burgundy/80 leading-relaxed">
+              Priority matrix, quick wins, 3/6/12-month implementation plan.
             </p>
-            <p>
-              That obsession became my work. Today I translate spatial research into practical changes, for home offices, commercial workspaces, and organisations that want to stop guessing and start measuring what their environment is doing to their people.
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-sage text-warm-white rounded-full flex items-center justify-center text-2xl font-heading mb-6 mx-auto">
+              4
+            </div>
+            <h3 className="font-heading text-xl text-burgundy mb-3">
+              Implementation Support
+            </h3>
+            <p className="text-burgundy/80 leading-relaxed">
+              3 follow-up calls (30/60/90 days) + supplier recommendations.
             </p>
           </div>
         </div>
+        <div className="text-center mt-12">
+          <p className="text-lg text-burgundy/80 mb-6">
+            Investment: €5.000-12.000 (depending on scope)
+          </p>
+          <Link
+            href="/work-with-me"
+            className="inline-block bg-sage text-warm-white px-8 py-4 rounded-sm hover:bg-sage/90 transition-colors font-medium"
+          >
+            Book your discovery call
+          </Link>
+        </div>
       </section>
 
-      {/* How I Can Help Section */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <h2 className="font-heading text-3xl md:text-5xl text-burgundy mb-16 text-center">
-          How I can help
-        </h2>
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="bg-warm-white border border-dusty-rose/30 p-10 rounded-sm">
-            <h3 className="font-heading text-2xl text-burgundy mb-4">
-              For individuals and remote workers
-            </h3>
-            <p className="text-burgundy/80 mb-8 leading-relaxed">
-              Your home office might be the most important room in your house. Start with the free Spatial Wellness Lite Audit, or go deeper with the Home Office Full Audit (€97) for detailed scores, personalised recommendations, and a prioritised action plan.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://audit.houseofreturn.nl"
-                className="inline-block bg-sage text-warm-white px-6 py-3 rounded-sm hover:bg-sage/90 transition-colors font-medium text-center"
-              >
-                Start the free audit
-              </a>
-              <Link
-                href="/audit"
-                className="inline-block bg-transparent border-2 border-sage text-sage px-6 py-3 rounded-sm hover:bg-sage hover:text-warm-white transition-colors font-medium text-center"
-              >
-                Home Office Audit €97
-              </Link>
+      {/* Results Section */}
+      <section className="bg-burgundy text-warm-white py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-heading text-3xl md:text-5xl mb-16 text-center">
+            Results that matter
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="bg-warm-white/10 p-8 rounded-sm">
+              <blockquote className="text-lg leading-relaxed mb-6">
+                "After redesigning our 200-person hybrid office, sick leave dropped 23% in 6 months and voluntary turnover fell from 18% to 11%. We thought it was a culture problem. It was the fluorescent lights and zero quiet zones."
+              </blockquote>
+              <p className="text-warm-white/70">
+                — HR Director, Tech Scale-Up
+              </p>
+            </div>
+            <div className="bg-warm-white/10 p-8 rounded-sm">
+              <blockquote className="text-lg leading-relaxed mb-6">
+                "We thought our office was fine until the audit. Turns out 40% of our team was wearing noise-cancelling headphones all day just to cope. Three design changes later, focus scores are up 30%."
+              </blockquote>
+              <p className="text-warm-white/70">
+                — Operations Manager, Creative Agency
+              </p>
             </div>
           </div>
-          <div className="bg-warm-white border border-dusty-rose/30 p-10 rounded-sm">
-            <h3 className="font-heading text-2xl text-burgundy mb-4">
-              For organisations
-            </h3>
-            <p className="text-burgundy/80 mb-8 leading-relaxed">
-              Your office is working on your people every single day. The question is whether it's working for them. I offer spatial wellness audits, consulting, and speaking for teams that are ready to look at their environment with fresh eyes.
-            </p>
-            <Link
-              href="/work-with-me"
-              className="inline-block bg-sage text-warm-white px-6 py-3 rounded-sm hover:bg-sage/90 transition-colors font-medium"
-            >
-              See what I offer
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Testimonial Section */}
-      <section className="bg-burgundy text-warm-white py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <blockquote className="text-xl md:text-2xl font-heading leading-relaxed italic text-center mb-6">
-            "Elianne completely changed how we think about our workspace. We always assumed people were just tired or distracted, but she showed us what the environment was actually doing to them. The lighting alone was exhausting our team before lunch. We made three changes and saw an immediate difference in focus and energy. I can't unsee it now."
-          </blockquote>
-          <p className="text-center text-warm-white/70">
-            - Sarah de Vries, HR Director
+      {/* Who I Am Section */}
+      <section className="max-w-4xl mx-auto px-6 py-24">
+        <h2 className="font-heading text-3xl md:text-5xl text-burgundy mb-12">
+          Who I am
+        </h2>
+        <div className="prose prose-lg max-w-none text-burgundy/90 leading-relaxed space-y-6">
+          <p>
+            I'm Elianne Alblas. I've had various businesses in the hospitality industry where I saw firsthand what interior and environment does to people. Thousands of guests, employees, and teams moving through spaces I helped shape. 
           </p>
+          <p>
+            Along the way I became obsessed with a question most people in hospitality never ask: what is this room doing to the people in it? Not aesthetically. Neurologically.
+          </p>
+          <p>
+            I started reading everything I could find on environmental psychology, neuroscience, and neuro-inclusive design. Not as a scientist, but because I needed to understand why some spaces make people sharper, calmer, more creative. And why others quietly drain them.
+          </p>
+          <p>
+            That obsession became my work. Today I translate spatial research into practical changes for organisations that want to stop guessing and start measuring what their environment is doing to their people.
+          </p>
+          <div className="pt-6">
+            <Link
+              href="/about"
+              className="text-sage hover:text-sage/80 transition-colors font-medium text-lg"
+            >
+              More about me →
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* From the Blog Section */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <h2 className="font-heading text-3xl md:text-5xl text-burgundy mb-16">
-          From the blog
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="border border-dusty-rose/30 p-6 rounded-sm">
-            <h3 className="font-heading text-xl text-burgundy mb-3">
-              Why your office feels exhausting before lunch
-            </h3>
-            <p className="text-burgundy/70 text-sm mb-4">
-              It's not you. It's the fluorescent lights doing something to your nervous system that most people don't notice until it's too late.
-            </p>
-            <Link href="/writing" className="text-sage hover:text-sage/80 transition-colors text-sm font-medium">
-              Read more →
-            </Link>
-          </div>
-          <div className="border border-dusty-rose/30 p-6 rounded-sm">
-            <h3 className="font-heading text-xl text-burgundy mb-3">
-              The open floor plan isn't broken. It's just designed for the wrong people.
-            </h3>
-            <p className="text-burgundy/70 text-sm mb-4">
-              1 in 5 people on your team experiences sound fundamentally differently. Here's what that means for your workspace.
-            </p>
-            <Link href="/writing" className="text-sage hover:text-sage/80 transition-colors text-sm font-medium">
-              Read more →
-            </Link>
-          </div>
-          <div className="border border-dusty-rose/30 p-6 rounded-sm">
-            <h3 className="font-heading text-xl text-burgundy mb-3">
-              Three things you can change today (without asking permission)
-            </h3>
-            <p className="text-burgundy/70 text-sm mb-4">
-              Small changes that make an immediate difference to how your workspace affects your focus, energy, and mood.
-            </p>
-            <Link href="/writing" className="text-sage hover:text-sage/80 transition-colors text-sm font-medium">
-              Read more →
-            </Link>
+      <section className="bg-dusty-rose/10 py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-heading text-3xl md:text-5xl text-burgundy mb-16">
+            From the blog
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="border border-dusty-rose/30 p-6 rounded-sm bg-warm-white">
+              <h3 className="font-heading text-xl text-burgundy mb-3">
+                Why your office feels exhausting before lunch
+              </h3>
+              <p className="text-burgundy/70 text-sm mb-4">
+                It's not you. It's the fluorescent lights doing something to your nervous system that most people don't notice until it's too late.
+              </p>
+              <Link href="/writing" className="text-sage hover:text-sage/80 transition-colors text-sm font-medium">
+                Read more →
+              </Link>
+            </div>
+            <div className="border border-dusty-rose/30 p-6 rounded-sm bg-warm-white">
+              <h3 className="font-heading text-xl text-burgundy mb-3">
+                The open floor plan isn't broken. It's just designed for the wrong people.
+              </h3>
+              <p className="text-burgundy/70 text-sm mb-4">
+                1 in 5 people on your team experiences sound fundamentally differently. Here's what that means for your workspace.
+              </p>
+              <Link href="/writing" className="text-sage hover:text-sage/80 transition-colors text-sm font-medium">
+                Read more →
+              </Link>
+            </div>
+            <div className="border border-dusty-rose/30 p-6 rounded-sm bg-warm-white">
+              <h3 className="font-heading text-xl text-burgundy mb-3">
+                Your office is costing you €50.000/year in sick leave
+              </h3>
+              <p className="text-burgundy/70 text-sm mb-4">
+                Here's the math most HR teams miss — and the three design changes that cut sick leave by 23%.
+              </p>
+              <Link href="/writing" className="text-sage hover:text-sage/80 transition-colors text-sm font-medium">
+                Read more →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Newsletter CTA */}
-      <section className="bg-dusty-rose/10 py-24 px-6">
+      <section className="bg-burgundy text-warm-white py-24 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-heading text-3xl md:text-4xl text-burgundy mb-6">
+          <h2 className="font-heading text-3xl md:text-4xl mb-6">
             Stay in touch
           </h2>
-          <p className="text-lg text-burgundy/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            I write about how spaces shape us, the science, the details, the things nobody tells you about your workspace. Straight to your inbox, no fluff.
+          <p className="text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+            I write about spatial wellness, neuro-inclusive design, and the research that changes how we think about workspaces. Straight to your inbox, no fluff.
           </p>
           <a
             href="https://substack.com/@spatialwellness"
