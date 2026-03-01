@@ -205,29 +205,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Results Section */}
+      {/* Research & Impact Section */}
       <section className="bg-burgundy text-warm-white py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-5xl mb-16 text-center">
-            Results that matter
+          <h2 className="font-heading text-3xl md:text-5xl mb-12 text-center">
+            What the research shows
           </h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-warm-white/10 p-8 rounded-sm">
-              <blockquote className="text-lg leading-relaxed mb-6">
-                "After redesigning our 200-person hybrid office, sick leave dropped 23% in 6 months and voluntary turnover fell from 18% to 11%. We thought it was a culture problem. It was the fluorescent lights and zero quiet zones."
-              </blockquote>
-              <p className="text-warm-white/70">
-                — HR Director, Tech Scale-Up
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-warm-white/10 p-8 rounded-sm text-center">
+              <div className="text-4xl font-heading mb-4 text-dusty-rose">10-20%</div>
+              <p className="text-lg leading-relaxed">
+                of your workforce is neurodivergent (ADHD, autism, HSP) — whether you know it or not.
+              </p>
+              <p className="text-sm text-warm-white/60 mt-4">
+                Source: World Economic Forum, 2023
               </p>
             </div>
-            <div className="bg-warm-white/10 p-8 rounded-sm">
-              <blockquote className="text-lg leading-relaxed mb-6">
-                "We thought our office was fine until the audit. Turns out 40% of our team was wearing noise-cancelling headphones all day just to cope. Three design changes later, focus scores are up 30%."
-              </blockquote>
-              <p className="text-warm-white/70">
-                — Operations Manager, Creative Agency
+            <div className="bg-warm-white/10 p-8 rounded-sm text-center">
+              <div className="text-4xl font-heading mb-4 text-dusty-rose">30%</div>
+              <p className="text-lg leading-relaxed">
+                more productive: teams with neurodivergent people when properly supported.
+              </p>
+              <p className="text-sm text-warm-white/60 mt-4">
+                Source: Deloitte Research
               </p>
             </div>
+            <div className="bg-warm-white/10 p-8 rounded-sm text-center">
+              <div className="text-4xl font-heading mb-4 text-dusty-rose">Higher Risk</div>
+              <p className="text-lg leading-relaxed">
+                of sick leave in open-plan offices compared to private or shared spaces.
+              </p>
+              <p className="text-sm text-warm-white/60 mt-4">
+                Source: Ergonomics, 2014
+              </p>
+            </div>
+          </div>
+          <div className="text-center">
+            <p className="text-xl leading-relaxed max-w-3xl mx-auto">
+              Your office is either unlocking this potential — or quietly draining it. Let's find out which.
+            </p>
           </div>
         </div>
       </section>
@@ -292,10 +308,10 @@ export default function Home() {
             </div>
             <div className="border border-dusty-rose/30 p-6 rounded-sm bg-warm-white">
               <h3 className="font-heading text-xl text-burgundy mb-3">
-                Your office is costing you €50.000/year in sick leave
+                How much is sick leave costing your company?
               </h3>
               <p className="text-burgundy/70 text-sm mb-4">
-                Here's the math most HR teams miss — and the three design changes that cut sick leave by 23%.
+                Most HR teams underestimate the real cost. Here's how to calculate it — and why your office design might be the hidden culprit.
               </p>
               <Link href="/writing" className="text-sage hover:text-sage/80 transition-colors text-sm font-medium">
                 Read more →
