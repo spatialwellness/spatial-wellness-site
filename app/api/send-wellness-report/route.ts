@@ -65,7 +65,9 @@ const quickWins: Record<string, string[]> = {
 
 export async function POST(request: Request) {
   try {
+    console.log('[API] Wellness report request received');
     const body = await request.json();
+    console.log('[API] Body parsed:', { email: body.email, teamSize: body.teamSize });
     const { email, teamSize, avgSalary, checkedFeatures, results } = body;
 
     // Build missing features list
@@ -186,9 +188,14 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error('Resend error:', error);
-      return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
+      console.error('[API] Resend error:', error);
+      return NextResponse.json({ 
+        error: 'Failed to send email', 
+        details: error.message || String(error) 
+      }, { status: 500 });
     }
+
+    console.log('[API] Email sent successfully:', data?.id);
 
     // Log to console for tracking (you can add Google Sheets later)
     console.log('Wellness report sent:', {
@@ -202,7 +209,10 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, data });
   } catch (error) {
-    console.error('Error in send-wellness-report:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    console.error('[API] Error in send-wellness-report:', error);
+    return NextResponse.json({ 
+      error: 'Internal server error',
+      details: error instanceof Error ? error.message : String(error)
+    }, { status: 500 });
   }
 }

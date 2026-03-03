@@ -115,10 +115,13 @@ export default function WellnessCalculator() {
       if (response.ok) {
         setSubmitted(true);
       } else {
-        alert('Something went wrong. Please try again.');
+        const errorData = await response.json().catch(() => ({}));
+        console.error('API Error:', response.status, errorData);
+        alert(`Something went wrong: ${errorData.error || 'Please try again.'}`);
       }
     } catch (error) {
-      alert('Something went wrong. Please try again.');
+      console.error('Fetch error:', error);
+      alert(`Network error: ${error instanceof Error ? error.message : 'Please try again.'}`);
     } finally {
       setIsSubmitting(false);
     }
