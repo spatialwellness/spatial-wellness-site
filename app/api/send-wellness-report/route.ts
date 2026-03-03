@@ -179,7 +179,7 @@ export async function POST(request: Request) {
 
     // Send email via Resend
     const { data, error } = await resend.emails.send({
-      from: 'Spatial Wellness <hello@houseofreturn.nl>',
+      from: 'Spatial Wellness <hello@spatial-wellness.com>',
       to: [email],
       subject: `Your office is losing €${results.annualLoss.toLocaleString('nl-NL')}/year`,
       html: htmlContent,
