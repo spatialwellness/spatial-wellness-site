@@ -143,7 +143,7 @@ export default function Home() {
       </section>
 
       {/* Calculate Your Cost Section */}
-      <section className="bg-dusty-rose/10 py-24 px-6">
+      <section id="calculator" className="bg-dusty-rose/10 py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-3xl md:text-5xl text-burgundy mb-8 text-center">
             What is your office costing you?
