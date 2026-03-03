@@ -85,7 +85,7 @@ export default function Speaking() {
               Elianne Alblas is a spatial wellness specialist who works at the intersection of design, environmental psychology, and neuroscience. Not to lecture, but to translate. Her approach is direct, research-informed, and grounded in what actually works inside real organisations.
             </p>
             <p>
-              She started in commercial design, running her own businesses where she could watch what really happens when people move through a space. That obsession with the gap between how we design offices and how human brains actually work in them became her practice. She has built her work around one conviction: the spaces we design are doing something to people whether we intend it or not. The question is what.
+              She ran businesses in hospitality where she saw firsthand what environment does to people. That level of attention to spatial impact is what most offices completely miss. That gap became her focus. She has built her work around one conviction: the spaces we design are doing something to people whether we intend it or not. The question is what.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ export default function Speaking() {
               Ready to bring this into your organisation?
             </h3>
             <p className="mb-6">
-              Every speaking engagement includes a complimentary Spatial Wellness Quick Scan, a €197 value.
+              Let's talk about what would work for your event and audience.
             </p>
             <a
               href="mailto:hello@spatial-wellness.com"

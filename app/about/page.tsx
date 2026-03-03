@@ -15,7 +15,7 @@ export default function About() {
             I'm Elianne Alblas. I design workspaces, but not in the way most people think about design.
           </p>
           <p>
-            I started in commercial interiors, running my own businesses and designing spaces where I could watch what actually happens when people move through a room. Not what the mood board promised. What really happened. And I kept noticing the same thing: people respond to the same environment in completely different ways.
+            I ran businesses in hospitality where I could watch what environment actually does to people. Not what the design promised. What really happened. And I kept noticing the same thing: people respond to the same environment in completely different ways.
           </p>
           <p>
             That became the question I couldn't let go of. Why does an open floor plan energize one person and drain another by 10 AM? Why does fluorescent lighting give some people headaches while others don't notice? Why do some offices feel calm and others feel like chaos?

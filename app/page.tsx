@@ -269,7 +269,7 @@ export default function Home() {
         </h2>
         <div className="prose prose-lg max-w-none text-burgundy/90 leading-relaxed space-y-6">
           <p>
-            I'm Elianne Alblas. I started in commercial design, running my own businesses where I could watch how people actually move through the spaces I helped create. And I kept noticing something most people miss: how differently people respond to the same environment.
+            I'm Elianne Alblas. I ran businesses in hospitality where I saw firsthand what environment does to people. And I kept noticing something most offices completely miss: how differently people respond to the same environment.
           </p>
           <p>
             That turned into an obsession. What is this room doing to people? Not aesthetically. Neurologically. Why does one person thrive in an open space while another quietly shuts down? Why do some environments energize teams and others drain them by lunch?
