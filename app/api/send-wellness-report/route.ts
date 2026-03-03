@@ -3,6 +3,15 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const currencySymbols: Record<string, string> = {
+  EUR: '€',
+  USD: '$',
+  GBP: '£',
+  AUD: 'A$',
+  CAD: 'C$',
+  CNY: '¥'
+};
+
 const featureNames: Record<string, string> = {
   lighting: 'Adjustable lighting',
   acoustics: 'Acoustic treatment',
@@ -67,8 +76,11 @@ export async function POST(request: Request) {
   try {
     console.log('[API] Wellness report request received');
     const body = await request.json();
-    console.log('[API] Body parsed:', { email: body.email, teamSize: body.teamSize, newsletter: body.newsletter });
-    const { email, newsletter, teamSize, avgSalary, checkedFeatures, results } = body;
+    console.log('[API] Body parsed:', { email: body.email, teamSize: body.teamSize, newsletter: body.newsletter, currency: body.currency });
+    const { email, newsletter, teamSize, avgSalary, currency, checkedFeatures, results } = body;
+
+    const currencySymbol = currencySymbols[currency] || '€';
+    const formatCurrency = (amount: number) => `${currencySymbol}${amount.toLocaleString('en-US')}`;
 
     // Build missing features list
     const allFeatureIds = Object.keys(featureNames);
@@ -123,7 +135,7 @@ export async function POST(request: Request) {
                 Estimated Annual Loss
               </p>
               <p style="margin: 0 0 16px 0; font-size: 42px; font-weight: 300;">
-                €${results.annualLoss.toLocaleString('nl-NL')}
+                ${formatCurrency(results.annualLoss)}
               </p>
               <p style="margin: 0; opacity: 0.9; line-height: 1.6;">
                 Based on ${results.missingFeatures.length} missing features (${results.totalImpact}% productivity impact) across ${teamSize} people.
@@ -183,7 +195,7 @@ export async function POST(request: Request) {
     const { data, error } = await resend.emails.send({
       from: 'Spatial Wellness <hello@spatial-wellness.com>',
       to: [email],
-      subject: `Your office is losing €${results.annualLoss.toLocaleString('nl-NL')}/year`,
+      subject: `Your office is losing ${formatCurrency(results.annualLoss)}/year`,
       html: htmlContent,
     });
 
@@ -208,7 +220,8 @@ export async function POST(request: Request) {
           <li><strong>Email:</strong> ${email}</li>
           <li><strong>Newsletter:</strong> ${newsletter ? 'YES ✓' : 'No'}</li>
           <li><strong>Team size:</strong> ${teamSize} people</li>
-          <li><strong>Annual loss:</strong> €${results.annualLoss.toLocaleString('nl-NL')}</li>
+          <li><strong>Currency:</strong> ${currency}</li>
+          <li><strong>Annual loss:</strong> ${formatCurrency(results.annualLoss)}</li>
           <li><strong>Wellness score:</strong> ${results.wellnessScore}%</li>
           <li><strong>Missing features:</strong> ${sortedMissing.map(id => featureNames[id]).join(', ')}</li>
         </ul>
@@ -222,6 +235,7 @@ export async function POST(request: Request) {
       newsletter,
       teamSize,
       avgSalary,
+      currency,
       wellnessScore: results.wellnessScore,
       annualLoss: results.annualLoss,
       missingFeatures: sortedMissing

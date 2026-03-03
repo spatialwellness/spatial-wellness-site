@@ -9,6 +9,21 @@ interface Feature {
   description: string;
 }
 
+interface Currency {
+  code: string;
+  symbol: string;
+  name: string;
+}
+
+const currencies: Currency[] = [
+  { code: 'EUR', symbol: '€', name: 'Euro' },
+  { code: 'USD', symbol: '$', name: 'US Dollar' },
+  { code: 'GBP', symbol: '£', name: 'British Pound' },
+  { code: 'AUD', symbol: 'A$', name: 'Australian Dollar' },
+  { code: 'CAD', symbol: 'C$', name: 'Canadian Dollar' },
+  { code: 'CNY', symbol: '¥', name: 'Chinese Yuan' },
+];
+
 const features: Feature[] = [
   {
     id: 'lighting',
@@ -52,11 +67,18 @@ export default function WellnessCalculator() {
   const [checkedFeatures, setCheckedFeatures] = useState<Set<string>>(new Set());
   const [teamSize, setTeamSize] = useState<string>('20');
   const [avgSalary, setAvgSalary] = useState<string>('45000');
+  const [currency, setCurrency] = useState<string>('EUR');
   const [showResults, setShowResults] = useState(false);
   const [email, setEmail] = useState('');
   const [newsletter, setNewsletter] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  const selectedCurrency = currencies.find(c => c.code === currency) || currencies[0];
+
+  const formatCurrency = (amount: number): string => {
+    return `${selectedCurrency.symbol}${amount.toLocaleString('en-US')}`;
+  };
 
   const handleFeatureToggle = (id: string) => {
     const newSet = new Set(checkedFeatures);
@@ -109,6 +131,7 @@ export default function WellnessCalculator() {
           newsletter,
           teamSize: parseInt(teamSize),
           avgSalary: parseInt(avgSalary),
+          currency: currency,
           checkedFeatures: Array.from(checkedFeatures),
           results
         })
@@ -201,17 +224,35 @@ export default function WellnessCalculator() {
         </div>
         <div>
           <label className="block text-sm font-medium text-burgundy mb-2">
-            Average salary (€)
+            Currency
           </label>
-          <input
-            type="number"
-            value={avgSalary}
-            onChange={(e) => setAvgSalary(e.target.value)}
-            className="w-full px-4 py-3 border border-dusty-rose/30 rounded-sm focus:outline-none focus:ring-2 focus:ring-sage"
-            placeholder="45000"
-            min="0"
-          />
+          <select
+            value={currency}
+            onChange={(e) => setCurrency(e.target.value)}
+            className="w-full px-4 py-3 border border-dusty-rose/30 rounded-sm focus:outline-none focus:ring-2 focus:ring-sage bg-white"
+          >
+            {currencies.map((curr) => (
+              <option key={curr.code} value={curr.code}>
+                {curr.symbol} {curr.name}
+              </option>
+            ))}
+          </select>
         </div>
+      </div>
+
+      {/* Salary Input */}
+      <div className="mb-8">
+        <label className="block text-sm font-medium text-burgundy mb-2">
+          Average salary ({selectedCurrency.symbol})
+        </label>
+        <input
+          type="number"
+          value={avgSalary}
+          onChange={(e) => setAvgSalary(e.target.value)}
+          className="w-full px-4 py-3 border border-dusty-rose/30 rounded-sm focus:outline-none focus:ring-2 focus:ring-sage"
+          placeholder="45000"
+          min="0"
+        />
       </div>
 
       {/* Calculate Button */}
@@ -232,7 +273,7 @@ export default function WellnessCalculator() {
               Estimated Annual Loss
             </p>
             <p className="font-heading text-4xl md:text-5xl mb-4">
-              €{results.annualLoss.toLocaleString('nl-NL')}
+              {formatCurrency(results.annualLoss)}
             </p>
             <p className="text-warm-white/80 leading-relaxed">
               Based on {results.missingFeatures.length} missing features ({results.totalImpact}% productivity impact) 
