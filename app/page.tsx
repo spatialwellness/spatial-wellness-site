@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import WellnessCalculator from './components/WellnessCalculator';
 
 export default function Home() {
   return (
@@ -148,39 +149,9 @@ export default function Home() {
             What is your office costing you?
           </h2>
           <p className="text-xl text-burgundy/80 mb-12 text-center max-w-2xl mx-auto leading-relaxed">
-            Most HR teams underestimate the real cost of sick leave, turnover, and disengagement. Here's how to calculate it.
+            Most offices are missing 3-5 spatial wellness features. Each one costs you 4-7% in productivity. Calculate your loss in 60 seconds.
           </p>
-          <div className="bg-warm-white border border-dusty-rose/30 p-10 rounded-sm">
-            <h3 className="font-heading text-2xl text-burgundy mb-6">Sick Leave Cost Calculator</h3>
-            <div className="space-y-4 text-burgundy/80 mb-6">
-              <p className="flex items-center gap-3">
-                <span className="text-sage">→</span>
-                <span>Team size × average sick days/year × €250/day (salary + lost productivity)</span>
-              </p>
-              <p className="flex items-center gap-3">
-                <span className="text-sage">→</span>
-                <span>If your sick leave is above industry average, your office might be the hidden culprit</span>
-              </p>
-              <p className="flex items-center gap-3">
-                <span className="text-sage">→</span>
-                <span>Research links open-plan offices to elevated sick leave risk</span>
-              </p>
-            </div>
-            <div className="pt-6 border-t border-dusty-rose/30">
-              <p className="text-lg text-burgundy mb-4">
-                <strong>Want to diagnose what's draining your team?</strong>
-              </p>
-              <p className="text-burgundy/80 mb-6">
-                Book a free 30-minute discovery call. We'll walk through your space, calculate your exposure, and identify quick wins.
-              </p>
-              <Link
-                href="/work-with-me"
-                className="inline-block bg-sage text-warm-white px-8 py-4 rounded-sm hover:bg-sage/90 transition-colors font-medium"
-              >
-                Book discovery call
-              </Link>
-            </div>
-          </div>
+          <WellnessCalculator />
         </div>
       </section>
 
