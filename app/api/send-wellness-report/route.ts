@@ -210,24 +210,35 @@ export async function POST(request: Request) {
     console.log('[API] Email sent successfully:', data?.id);
 
     // Send notification to Elianne
-    await resend.emails.send({
-      from: 'Spatial Wellness <hello@spatial-wellness.com>',
-      to: ['hello@spatial-wellness.com'],
-      subject: `New Wellness Calculator Lead: ${email}`,
-      html: `
-        <p><strong>New wellness calculator submission!</strong></p>
-        <ul>
-          <li><strong>Email:</strong> ${email}</li>
-          <li><strong>Newsletter:</strong> ${newsletter ? 'YES ✓' : 'No'}</li>
-          <li><strong>Team size:</strong> ${teamSize} people</li>
-          <li><strong>Currency:</strong> ${currency}</li>
-          <li><strong>Annual loss:</strong> ${formatCurrency(results.annualLoss)}</li>
-          <li><strong>Wellness score:</strong> ${results.wellnessScore}%</li>
-          <li><strong>Missing features:</strong> ${sortedMissing.map(id => featureNames[id]).join(', ')}</li>
-        </ul>
-        <p><a href="mailto:${email}">Reply to ${email}</a></p>
-      `
-    });
+    try {
+      const notificationResult = await resend.emails.send({
+        from: 'Spatial Wellness <hello@spatial-wellness.com>',
+        to: ['hello@spatial-wellness.com'],
+        subject: `New Wellness Calculator Lead: ${email}`,
+        html: `
+          <p><strong>New wellness calculator submission!</strong></p>
+          <ul>
+            <li><strong>Email:</strong> ${email}</li>
+            <li><strong>Newsletter:</strong> ${newsletter ? 'YES ✓' : 'No'}</li>
+            <li><strong>Team size:</strong> ${teamSize} people</li>
+            <li><strong>Currency:</strong> ${currency}</li>
+            <li><strong>Annual loss:</strong> ${formatCurrency(results.annualLoss)}</li>
+            <li><strong>Wellness score:</strong> ${results.wellnessScore}%</li>
+            <li><strong>Missing features:</strong> ${sortedMissing.map(id => featureNames[id]).join(', ')}</li>
+          </ul>
+          <p><a href="mailto:${email}">Reply to ${email}</a></p>
+        `
+      });
+      
+      if (notificationResult.error) {
+        console.error('[API] Notification email failed:', notificationResult.error);
+      } else {
+        console.log('[API] Notification email sent:', notificationResult.data?.id);
+      }
+    } catch (notifError) {
+      console.error('[API] Failed to send notification email:', notifError);
+      // Don't fail the whole request if notification fails
+    }
 
     // Log to console for tracking (you can add Google Sheets later)
     console.log('Wellness report sent:', {
