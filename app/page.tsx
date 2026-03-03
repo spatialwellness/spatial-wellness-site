@@ -16,7 +16,7 @@ export default function Home() {
               Your hybrid office isn't working. People don't want to come in. When they do, they struggle to focus. Sick leave is up. Turnover is climbing.
             </p>
             <p className="text-lg md:text-xl text-burgundy/80 mb-12 max-w-3xl leading-relaxed">
-              The problem isn't your people — it's your space.
+              The problem isn't your people. It's your space.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -54,10 +54,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 text-lg leading-relaxed">
             <div>
               <p className="mb-6">
-                Most offices prioritize collaboration — open plans, breakout spaces, "energy."
+                Most offices prioritize collaboration: open plans, breakout spaces, "energy."
               </p>
               <p>
-                But 60% of knowledge work requires deep focus. And 30-40% of your team is neuro-diverse (ADHD, autism, HSP) — struggling with sensory overload daily.
+                But 60% of knowledge work requires deep focus. And 30-40% of your team is neuro-diverse (ADHD, autism, HSP), struggling with sensory overload daily.
               </p>
             </div>
             <div className="space-y-3">
@@ -97,7 +97,7 @@ export default function Home() {
           </h2>
           <div className="prose prose-lg max-w-none text-burgundy/90 leading-relaxed space-y-6 mb-12">
             <p>
-              I help companies redesign offices using <strong>neuro-inclusive spatial design</strong> — creating spaces that work for everyone, not just extroverts and neurotypical brains.
+              I help companies redesign offices using <strong>neuro-inclusive spatial design</strong>: creating spaces that work for everyone, not just extroverts and neurotypical brains.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 text-burgundy/90">
@@ -238,7 +238,7 @@ export default function Home() {
             <div className="bg-warm-white/10 p-8 rounded-sm">
               <h3 className="font-heading text-2xl mb-4 text-dusty-rose">10-20% of your team is neurodivergent</h3>
               <p className="text-lg leading-relaxed mb-4">
-                ADHD, autism, HSP (Highly Sensitive Person), dyslexia — whether diagnosed or not. Your office design either supports them or exhausts them.
+                ADHD, autism, HSP (Highly Sensitive Person), dyslexia (whether diagnosed or not). Your office design either supports them or exhausts them.
               </p>
               <p className="text-sm text-warm-white/60">
                 Source: World Economic Forum, 2023
@@ -256,7 +256,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <p className="text-xl leading-relaxed max-w-3xl mx-auto">
-              The question isn't whether your office affects your people. It's how much it's costing you — and what to fix first.
+              The question isn't whether your office affects your people. It's how much it's costing you, and what to fix first.
             </p>
           </div>
         </div>
@@ -325,7 +325,7 @@ export default function Home() {
                 How much is sick leave costing your company?
               </h3>
               <p className="text-burgundy/70 text-sm mb-4">
-                Most HR teams underestimate the real cost. Here's how to calculate it — and why your office design might be the hidden culprit.
+                Most HR teams underestimate the real cost. Here's how to calculate it, and why your office design might be the hidden culprit.
               </p>
               <Link href="/writing" className="text-sage hover:text-sage/80 transition-colors text-sm font-medium">
                 Read more →

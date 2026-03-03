@@ -54,6 +54,7 @@ export default function WellnessCalculator() {
   const [avgSalary, setAvgSalary] = useState<string>('45000');
   const [showResults, setShowResults] = useState(false);
   const [email, setEmail] = useState('');
+  const [newsletter, setNewsletter] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -105,6 +106,7 @@ export default function WellnessCalculator() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email,
+          newsletter,
           teamSize: parseInt(teamSize),
           avgSalary: parseInt(avgSalary),
           checkedFeatures: Array.from(checkedFeatures),
@@ -267,19 +269,32 @@ export default function WellnessCalculator() {
 
           {/* Email Form */}
           <form onSubmit={handleSubmitEmail}>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col gap-4">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="flex-1 px-4 py-3 border border-dusty-rose/30 rounded-sm focus:outline-none focus:ring-2 focus:ring-sage"
+                className="w-full px-4 py-3 border border-dusty-rose/30 rounded-sm focus:outline-none focus:ring-2 focus:ring-sage"
                 placeholder="your@email.com"
               />
+              
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={newsletter}
+                  onChange={(e) => setNewsletter(e.target.checked)}
+                  className="mt-1 w-4 h-4 text-sage border-dusty-rose/30 rounded focus:ring-sage"
+                />
+                <span className="text-burgundy/80 text-sm">
+                  Yes, send me practical tips on spatial wellness and neuro-inclusive design (you can unsubscribe anytime)
+                </span>
+              </label>
+
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-sage text-warm-white px-8 py-3 rounded-sm hover:bg-sage/90 transition-colors font-medium disabled:opacity-50"
+                className="w-full bg-sage text-warm-white px-8 py-3 rounded-sm hover:bg-sage/90 transition-colors font-medium disabled:opacity-50"
               >
                 {isSubmitting ? 'Sending...' : 'Get detailed report'}
               </button>

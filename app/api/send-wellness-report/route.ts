@@ -67,8 +67,8 @@ export async function POST(request: Request) {
   try {
     console.log('[API] Wellness report request received');
     const body = await request.json();
-    console.log('[API] Body parsed:', { email: body.email, teamSize: body.teamSize });
-    const { email, teamSize, avgSalary, checkedFeatures, results } = body;
+    console.log('[API] Body parsed:', { email: body.email, teamSize: body.teamSize, newsletter: body.newsletter });
+    const { email, newsletter, teamSize, avgSalary, checkedFeatures, results } = body;
 
     // Build missing features list
     const allFeatureIds = Object.keys(featureNames);
@@ -197,9 +197,29 @@ export async function POST(request: Request) {
 
     console.log('[API] Email sent successfully:', data?.id);
 
+    // Send notification to Elianne
+    await resend.emails.send({
+      from: 'Spatial Wellness <hello@spatial-wellness.com>',
+      to: ['hello@spatial-wellness.com'],
+      subject: `New Wellness Calculator Lead: ${email}`,
+      html: `
+        <p><strong>New wellness calculator submission!</strong></p>
+        <ul>
+          <li><strong>Email:</strong> ${email}</li>
+          <li><strong>Newsletter:</strong> ${newsletter ? 'YES ✓' : 'No'}</li>
+          <li><strong>Team size:</strong> ${teamSize} people</li>
+          <li><strong>Annual loss:</strong> €${results.annualLoss.toLocaleString('nl-NL')}</li>
+          <li><strong>Wellness score:</strong> ${results.wellnessScore}%</li>
+          <li><strong>Missing features:</strong> ${sortedMissing.map(id => featureNames[id]).join(', ')}</li>
+        </ul>
+        <p><a href="mailto:${email}">Reply to ${email}</a></p>
+      `
+    });
+
     // Log to console for tracking (you can add Google Sheets later)
     console.log('Wellness report sent:', {
       email,
+      newsletter,
       teamSize,
       avgSalary,
       wellnessScore: results.wellnessScore,
