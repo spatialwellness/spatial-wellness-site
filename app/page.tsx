@@ -269,16 +269,16 @@ export default function Home() {
         </h2>
         <div className="prose prose-lg max-w-none text-burgundy/90 leading-relaxed space-y-6">
           <p>
-            I'm Elianne Alblas. I've had various businesses in the hospitality industry where I saw firsthand what interior and environment does to people. Thousands of guests, employees, and teams moving through spaces I helped shape. 
+            I'm Elianne Alblas. I started in commercial design, running my own businesses where I could watch how people actually move through the spaces I helped create. And I kept noticing something most people miss: how differently people respond to the same environment.
           </p>
           <p>
-            Along the way I became obsessed with a question most people in hospitality never ask: what is this room doing to the people in it? Not aesthetically. Neurologically.
+            That turned into an obsession. What is this room doing to people? Not aesthetically. Neurologically. Why does one person thrive in an open space while another quietly shuts down? Why do some environments energize teams and others drain them by lunch?
           </p>
           <p>
-            I started reading everything I could find on environmental psychology, neuroscience, and neuro-inclusive design. Not as a scientist, but because I needed to understand why some spaces make people sharper, calmer, more creative. And why others quietly drain them.
+            I started reading everything I could find: environmental psychology, neuroscience, neuro-inclusive design. Not as a scientist, but because I needed to understand the gap between how we design spaces and how human brains actually work.
           </p>
           <p>
-            That obsession became my work. Today I translate spatial research into practical changes for organisations that want to stop guessing and start measuring what their environment is doing to their people.
+            Today I work specifically with office environments. Because that's where the stakes are highest. People spend 40+ hours a week in workplaces that either support their nervous system or fight it. Most companies have no idea which one they're doing. That's what I help them figure out.
           </p>
           <div className="pt-6">
             <Link

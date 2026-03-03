@@ -12,25 +12,25 @@ export default function About() {
 
             <div className="prose prose-lg max-w-none text-burgundy/90 leading-relaxed space-y-6">
           <p>
-            I'm Elianne Alblas. I'm an interior designer, but probably not the kind you're picturing.
+            I'm Elianne Alblas. I design workspaces, but not in the way most people think about design.
           </p>
           <p>
-            I've had multiple businesses in the hospitality industry. One coffee shop. Lots of spaces where I saw what environment does to thousands of people: guests, employees, teams. I learned by doing, by looking, by paying obsessive attention to how a room makes people feel the moment they walk in.
+            I started in commercial interiors, running my own businesses and designing spaces where I could watch what actually happens when people move through a room. Not what the mood board promised. What really happened. And I kept noticing the same thing: people respond to the same environment in completely different ways.
           </p>
           <p>
-            At some point something shifted. I started noticing that the conversations about workspace design were always about aesthetics and efficiency. Open plan or private offices. Standing desks or sitting desks. Warm lighting or cool lighting.
+            That became the question I couldn't let go of. Why does an open floor plan energize one person and drain another by 10 AM? Why does fluorescent lighting give some people headaches while others don't notice? Why do some offices feel calm and others feel like chaos?
           </p>
           <p>
-            But nobody was talking about what really happens. How fluorescent light exhausts your nervous system before lunch. How an open floor plan can feel like a warzone if your brain processes sound differently. How the colour of your walls is doing something to your mood whether you chose it deliberately or not.
+            The design conversations I was hearing missed the point entirely. Open plan or closed offices. Warm lighting or cool. Standing desks or sitting. All surface decisions. Nobody was asking the real question: what is this space doing to people's nervous systems?
           </p>
           <p>
-            I went deep. Environmental psychology. Neuroscience. Neuro-inclusive design. Not to become a researcher, but because I needed to understand why some spaces work and others don't. And because the answers were there, buried in academic papers that nobody in design was reading.
+            So I went looking for answers. Environmental psychology. Neuroscience. Neuro-inclusive design. Not to become a researcher, but because I needed to understand the gap between how we design offices and how human brains actually work in them.
           </p>
           <p>
-            Now I translate that research into language that makes sense and changes that people can actually make. Through audits, consulting, and speaking.
+            Today I work specifically with workplaces. That's where the impact matters most. People spend 40+ hours a week in offices that are either supporting their focus, wellbeing, and productivity or quietly undermining all three. Most companies have no idea which one they're doing.
           </p>
           <p>
-            I work from Utrecht, the Netherlands. I speak Dutch and English. I believe every space has the potential to work better for the people in it, and that starts with understanding what it's doing right now.
+            I translate research into changes people can actually make. Through consulting, strategic redesign, and speaking. I work from Utrecht, the Netherlands. I speak Dutch and English.
           </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function About() {
               What I draw from
             </h3>
             <p className="text-burgundy/80 leading-relaxed">
-              Environmental psychology. Neuroscience. Neuro-inclusive design. Multiple businesses in hospitality where I watched what environment does to thousands of people.
+              Environmental psychology. Neuroscience. Neuro-inclusive design. Years of watching what happens when you put real people in real spaces and pay obsessive attention.
             </p>
           </div>
           <div className="bg-dusty-rose/10 p-8 rounded-sm">

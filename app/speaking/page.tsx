@@ -82,10 +82,10 @@ export default function Speaking() {
               About Elianne
             </h3>
             <p>
-              Elianne Alblas is an interior designer and spatial wellness specialist who draws from environmental psychology, neuroscience, and neuro-inclusive design. Not to lecture, but to translate. Her approach is direct, research-informed, and grounded in what actually works inside real organisations.
+              Elianne Alblas is a spatial wellness specialist who works at the intersection of design, environmental psychology, and neuroscience. Not to lecture, but to translate. Her approach is direct, research-informed, and grounded in what actually works inside real organisations.
             </p>
             <p>
-              She has run multiple businesses in hospitality and through that has seen firsthand what environment does to thousands of people: guests, employees, teams. That lived experience is what she draws from. She has built her practice around one conviction: the spaces we design are doing something to people whether we intend it or not. The question is what.
+              She started in commercial design, running her own businesses where she could watch what really happens when people move through a space. That obsession with the gap between how we design offices and how human brains actually work in them became her practice. She has built her work around one conviction: the spaces we design are doing something to people whether we intend it or not. The question is what.
             </p>
           </div>
 
